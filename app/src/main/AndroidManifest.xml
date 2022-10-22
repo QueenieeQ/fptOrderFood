@@ -28,6 +28,9 @@
 
         </activity>
         <activity android:name=".OTP_Screen" />
+        <activity android:name=".userCompleteSignUp">
+
+        </activity>
     </application>
 
 </manifest>

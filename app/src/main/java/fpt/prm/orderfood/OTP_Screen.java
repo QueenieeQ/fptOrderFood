@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- Created by Sudheer on 02.12.2019.
+
  */
 
 public class OTP_Screen extends AppCompatActivity {
@@ -98,8 +98,10 @@ public class OTP_Screen extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent i = new Intent(OTP_Screen.this,LogOut.class);
-                                startActivity(i);
+                                Toast.makeText(OTP_Screen.this, "Phone number verify Sucessfully!!!", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(OTP_Screen.this,userCompleteSignUp.class));
+//                                Intent i = new Intent(OTP_Screen.this,userCompleteSignUp.class);
+//                                startActivity(i);
                                 finish();
                             } else {
                                 if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {

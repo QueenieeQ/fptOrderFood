@@ -59,7 +59,7 @@ public class Login_Screen extends AppCompatActivity implements GoogleApiClient.C
                 if (userMobileNumber.isEmpty()){
                     getMobNumber.setError("Enter your mobile number");
 
-                } else if (userMobileNumber.length()<9){
+                } else if (userMobileNumber.length()<=8){
                     getMobNumber.setError("Enter valid number");
 
                 } else{
