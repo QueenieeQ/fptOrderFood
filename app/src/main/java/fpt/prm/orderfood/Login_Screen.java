@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -27,6 +28,7 @@ public class Login_Screen extends AppCompatActivity implements GoogleApiClient.C
 
     private EditText getMobNumber;
     private Button loginNextButton;
+    private ImageButton login_back_btn;
     private final static int RESOLVE_HINT = 1011;
     private String mobNumber;
 
@@ -34,6 +36,14 @@ public class Login_Screen extends AppCompatActivity implements GoogleApiClient.C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+        login_back_btn = (ImageButton) findViewById(R.id.login_back_btn);
+        login_back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login_Screen.this,Welcome_layout.class));
+                finish();
+            }
+        });
 
         getMobNumber =findViewById(R.id.login_get_number);
         loginNextButton =findViewById(R.id.login_next);

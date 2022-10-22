@@ -16,12 +16,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".LogOut" />
-        <activity android:name=".Login_Screen">
+        <activity android:name=".Welcome_layout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".Login_Screen">
+
         </activity>
         <activity android:name=".OTP_Screen" />
     </application>
